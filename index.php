@@ -1,2 +1,2 @@
 <?php
-echo "tula ";
+echo "ggogogogog ";
