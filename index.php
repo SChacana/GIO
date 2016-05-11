@@ -4,7 +4,7 @@ require_once (dirname ( __FILE__ ) . '/../../config.php');?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="estilo.css">
 <title>
-Tutoriales WebCursos vito
+Tutoriales WebCursos
 </title>
 <body>
 <div id="linea">
@@ -12,7 +12,7 @@ Tutoriales WebCursos vito
 <div id="header">
 	<div id="logos">
 			<a class="logo" href="<?php echo $CFG->wwwroot . '/local/tutoriales/index.php'; ?> ">
-				<img src="images/nuevo-logo-wcurso_transp2.gif">
+				<img src="images/GIO.gif">
 			</a>
 		<div class="logo2">
 		</div>
