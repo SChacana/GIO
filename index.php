@@ -12,7 +12,7 @@ Tutoriales WebCursos
 <div id="header">
 	<div id="logos">
 			<a class="logo" href="<?php echo $CFG->wwwroot . '/local/tutoriales/index.php'; ?> ">
-				<img src="images/GIO.gif">
+				<img src="images/GIO.png">
 			</a>
 		<div class="logo2">
 		</div>
