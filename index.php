@@ -4,7 +4,7 @@ require_once (dirname ( __FILE__ ) . '/../../config.php');?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="estilo.css">
 <title>
-Tutoriales WebCursos
+Tutoriales WebCursos VITOOOOO
 </title>
 <body>
 <div id="linea">
