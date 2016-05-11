@@ -14,16 +14,28 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * Defines the version of emarking
- * This code fragment is called by moodle_needs_upgrading() and
- * /admin/index.php
- * 
+ *
  * @package local
  * @subpackage tics331
- * @copyright 2012-onwards Jorge Villalón
+ * @copyright 2012-onwards Jorge Villalon <jorge.villalon@uai.cl>
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-defined('MOODLE_INTERNAL') || die();
-$plugin->version = 2016032400; // The current module version (Date: YYYYMMDDXX).
-$plugin->requires = 2013110500; // Requires this Moodle version.
-$plugin->component = 'local_tics331'; // To check on upgrade, that module sits in correct place.
+// Minimum for Moodle to work, the basic libraries
+require_once(dirname(dirname(dirname(__FILE__))) . '/config.php');
+// Parameter passed from the url.
+$name = required_param('name', PARAM_TEXT);
+// Moodle pages require a context, that can be system, course or module (activity or resource)
+$context = context_system::instance();
+$PAGE->set_context($context);
+// Check that user is logued in the course.
+require_login();
+// Page navigation and URL settings.
+$PAGE->set_url(new moodle_url('/local/tics331', array('filter'=>$name)));
+$PAGE->set_pagelayout('incourse');
+$PAGE->set_title('Hello world');
+// Show the page header
+echo $OUTPUT->header();
+// Here goes the content
+echo 'Hello world';
+// Show the page footer
+echo $OUTPUT->footer();
