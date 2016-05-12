@@ -316,3 +316,4 @@ if (isloggedin() and !isguestuser()) {
     }
 }
 echo $OUTPUT->footer();
+?>
