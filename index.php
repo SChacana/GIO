@@ -14,29 +14,30 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 /**
- * An example of a stand-alone Moodle script.
  *
- * Says Hello, {username}, or Hello {name} if the name is given in the URL.
- *
- * @package   local_greet
- * @copyright 2014 Tim Hunt
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package local
+ * @subpackage tics331
+ * @copyright 2012-onwards Jorge Villalon <jorge.villalon@uai.cl>
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-require_once(dirname(__FILE__) . '/../../config.php');        // 1
-require_login();                                              // 2
-$context = context_system::instance();                        // 3
-require_capability('local/greet:begreeted', $context);        // 4
-$name = optional_param('name', '', PARAM_TEXT);               // 5
-if (!$name) {
-    $name = fullname($USER);                                  // 6
-}
-add_to_log(SITEID, 'local_greet', 'begreeted',
-        'local/greet/index.php?name=' . urlencode($name));    // 7
-$PAGE->set_context($context);                                 // 8
-$PAGE->set_url(new moodle_url('/local/greet/index.php'),
-        array('name' => $name));                              // 9
-$PAGE->set_title(get_string('welcome', 'local_greet'));       // 10
-echo $OUTPUT->header();                                       // 11
-echo $OUTPUT->box(get_string('greet', 'local_greet',
-        format_string($name)));                               // 12
-echo $OUTPUT->footer();                                       // 13
+// Minimum for Moodle to work, the basic libraries
+require_once(dirname(dirname(dirname(__FILE__))) . '../../config.php');
+
+// Parameter passed from the url.
+$name = required_param('name', PARAM_TEXT);
+// Moodle pages require a context, that can be system, course or module (activity or resource)
+$context = context_system::instance();
+$PAGE->set_context($context);
+// Check that user is logued in the course.
+require_login();
+// Page navigation and URL settings.
+$PAGE->set_url(new moodle_url('/local/tics331', array('filter'=>$name)));
+$PAGE->set_pagelayout('incourse');
+$PAGE->set_title('Hello world');
+// Show the page header
+echo $OUTPUT->header();
+// Here goes the content
+echo 'Hello world';
+// Show the page footer
+echo $OUTPUT->footer();
+?>
