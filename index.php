@@ -21,7 +21,7 @@
  * @copyright  1999 onwards Martin Dougiamas  http://dougiamas.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-require('../../config.php');
+require('config.php');
 require_once('lib.php');
 // Try to prevent searching for sites that allow sign-up.
 if (!isset($CFG->additionalhtmlhead)) {
