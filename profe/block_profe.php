@@ -2,6 +2,7 @@
 
 
 
+
 //Aca se crea el bloque
 class block_profe extends block_list {
 	public function init() {
@@ -12,23 +13,23 @@ class block_profe extends block_list {
 		if ($this->content !== null) {
     return $this->content;
   }
- //agrega un link a una página de moodle dentro del bloque
+ //agrega un link a una pÃ¡gina de moodle dentro del bloque
   $this->content         = new stdClass;
   $this->content->items  = array();
   $this->content->icons  = array();
   $this->content->footer = '';
- //Los links se añaden a las pestañas del bloque de la vista profesor
+ //Los links se aÃ±aden a las pestaÃ±as del bloque de la vista profesor
  
-  //pestaña crear proyecto
+  //pestaÃ±a crear proyecto
   $this->content->items[] = html_writer::tag('a', 'Crear Proyectos', array('href' => 'http://localhost/moodle/local/profesorCrearProyectos/index.php'));
   $this->content->icons[] = html_writer::empty_tag('img', array('src' => '', 'class' => 'icon'));
-  //pestaña ver proyecto
+  //pestaÃ±a ver proyecto
   $this->content->items[] = html_writer::tag('a', 'Ver proyectos', array('href' => 'http://localhost/moodle/local/profesorVerProyectos/index.php'));
   $this->content->icons[] = html_writer::empty_tag('img', array('src' => '', 'class' => 'icon'));
-  //pestaña asignar proyectos
+  //pestaÃ±a asignar proyectos
   $this->content->items[] = html_writer::tag('a', 'Asignar proyectos', array('href' => 'http://localhost/moodle/local/profesorAsignarProyectos/index.php'));
   $this->content->icons[] = html_writer::empty_tag('img', array('src' => '', 'class' => 'icon'));
-  //pestaña reunion
+  //pestaÃ±a reunion
   $this->content->items[] = html_writer::tag('a', 'Reunion', array('href' => 'http://localhost/moodle/local/profesorReunion/index.php'));
   $this->content->icons[] = html_writer::empty_tag('img', array('src' => '', 'class' => 'icon'));
   
