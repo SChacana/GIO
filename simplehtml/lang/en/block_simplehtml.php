@@ -1,6 +1,7 @@
 
 <?php
 
+
 $string['pluginname'] = 'Proyectos Alumnos block';
 $string['simplehtml'] = 'Proyectos Alumnos';
 $string['simplehtml:addinstance'] = 'Add a new simple HTML block';
