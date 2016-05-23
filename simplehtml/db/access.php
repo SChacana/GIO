@@ -1,4 +1,5 @@
 <?php
+
 //accede a la base de datos de moodle
     $capabilities = array(
  
